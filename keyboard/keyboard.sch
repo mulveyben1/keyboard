@@ -26,17 +26,6 @@ F 3 "" H 5200 4750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard:XTAL_GND X1
-U 1 1 5D720272
-P 3100 5450
-F 0 "X1" H 3100 5742 60  0000 C CNN
-F 1 "XTAL_GND" H 3100 5636 60  0000 C CNN
-F 2 "Crystal:Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm_HandSoldering" H 3100 5450 60  0001 C CNN
-F 3 "" H 3100 5450 60  0000 C CNN
-	1    3100 5450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C3
 U 1 1 5D720D23
 P 2600 5650
@@ -59,8 +48,6 @@ F 3 "~" H 3600 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3100 5900 3100 5650
-Wire Wire Line
 	3600 5800 3600 5900
 Wire Wire Line
 	3600 5900 3100 5900
@@ -74,19 +61,9 @@ Wire Wire Line
 Wire Wire Line
 	2600 5450 2600 5550
 Wire Wire Line
-	4150 5300 3600 5300
-Wire Wire Line
-	3600 5300 3600 5450
-Wire Wire Line
 	3600 5450 3400 5450
-Connection ~ 3600 5450
 Wire Wire Line
 	3600 5450 3600 5600
-Wire Wire Line
-	4150 5200 2600 5200
-Wire Wire Line
-	2600 5200 2600 5450
-Connection ~ 2600 5450
 $Comp
 L power:VCC #PWR01
 U 1 1 5D728394
@@ -6385,4 +6362,27 @@ Wire Wire Line
 Connection ~ 11350 13450
 Wire Wire Line
 	11350 13450 12050 13450
+Wire Wire Line
+	3100 5650 3100 5900
+$Comp
+L keyboard:XTAL_GND X1
+U 1 1 5D720272
+P 3100 5450
+F 0 "X1" H 3100 5742 60  0000 C CNN
+F 1 "XTAL_GND" H 3100 5636 60  0000 C CNN
+F 2 "Crystal:Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm_HandSoldering" H 3100 5450 60  0001 C CNN
+F 3 "" H 3100 5450 60  0000 C CNN
+	1    3100 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 5450 3600 5200
+Wire Wire Line
+	3600 5200 4150 5200
+Connection ~ 3600 5450
+Wire Wire Line
+	4150 5300 2600 5300
+Wire Wire Line
+	2600 5300 2600 5450
+Connection ~ 2600 5450
 $EndSCHEMATC
